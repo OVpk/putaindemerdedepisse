@@ -28,6 +28,8 @@ public class SelectCharacter : MonoBehaviour
     public Image player2Img;
 
     public List<Sprite> aliens;
+    public List<Sprite> aliensVERSUS;
+    public List<Sprite> aliensSILOUHETE;
     
     public TMP_Text chronoText;
     public int chronoStartValue = 5;
@@ -61,6 +63,12 @@ public class SelectCharacter : MonoBehaviour
         chronoText.text = "0";
         StartCoroutine(BeginGame());
     }
+    
+    public Image player1VERSUSImg;
+    public Image player2VERSUSImg;
+
+    public Image silouhetePlayer1;
+    public Image silouhetePlayer2;
 
     public void ShowRepere(CouleurEnum couleur, PlayerController.PlayerID playerId)
     {
@@ -73,6 +81,8 @@ public class SelectCharacter : MonoBehaviour
             player1Repere[(int)couleur].SetActive(true);
 
             player1Img.sprite = aliens[(int)couleur];
+            player1VERSUSImg.sprite = aliensVERSUS[(int)couleur];
+            silouhetePlayer1.sprite = aliensSILOUHETE[(int)couleur];
         }
         
         if (playerId == PlayerController.PlayerID.Player2)
@@ -84,6 +94,8 @@ public class SelectCharacter : MonoBehaviour
             player2Repere[(int)couleur].SetActive(true);
             
             player2Img.sprite = aliens[(int)couleur];
+            player2VERSUSImg.sprite = aliensVERSUS[(int)couleur];
+            silouhetePlayer2.sprite = aliensSILOUHETE[(int)couleur];
         }
     }
     
