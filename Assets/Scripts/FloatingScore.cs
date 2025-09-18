@@ -85,6 +85,8 @@ public class FloatingScore : MonoBehaviour
     /// </summary>
     public void Initialize(Vector2 pos, int score)
     {
+        if (score > 100) return;
+        
         startPos = pos;
         rect.anchoredPosition = startPos;
         elapsed = 0f;
