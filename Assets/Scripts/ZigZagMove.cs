@@ -25,22 +25,23 @@ public class ZigZagMove : MonoBehaviour
     public void Init()
     {
         if (target == null) target = GetComponent<RectTransform>();
-        
-        int side = Random.value < 0.5f ? -1 : 1;
-        
-        float offset = target.rect.width * 1.2f;
+
+        float offset = target.rect.height * 1.2f;
         Vector2 canvasMax = worldCanvas.rect.max;
         Vector2 canvasMin = worldCanvas.rect.min;
-        
-        float startX = side == 1 ? canvasMax.x + offset : canvasMin.x - offset;
-        Vector2 startPos = new Vector2(startX, 0f);
+
+        // Position de départ : au-dessus du canvas, x choisi aléatoirement dans la largeur
+        float startX = Random.Range(canvasMin.x, canvasMax.x);
+        float startY = canvasMax.y + offset;
+        Vector2 startPos = new Vector2(startX, startY);
         target.anchoredPosition = startPos;
 
         hasEntered = false;
 
-        // Position d'arrivée initiale, par exemple le centre horizontal droit
-        entryTargetPos = new Vector2(canvasMax.x * 0.5f, 0f);
+        // Position cible d'entrée (par exemple au même x mais un peu plus bas dans le canvas)
+        entryTargetPos = new Vector2(startX, canvasMax.y * 0.7f); 
     }
+
 
     public void StartMove()
     {
