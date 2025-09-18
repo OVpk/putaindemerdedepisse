@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
             transitionEntreRoundScript.LoadDatas(scoreP1, scoreP2, winningRoundP1, winningRoundP2, spriteJ1, spriteJ2, i);
             transitionEntreRoundScript.animator.SetTrigger("Start");
 
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(8f);
             
             transitionEntreRoundScript.gameObject.SetActive(false);
             
