@@ -3223,6 +3223,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8c417cf48ff62994cb77cf91be08b69c, type: 3}
   - {fileID: 8300000, guid: 3c711ad23b83ae346b5f15fa85d1a70f, type: 3}
   - {fileID: 8300000, guid: 54d0df3e7e7c5b441a3bfa36eeffcf71, type: 3}
+  animDeTransition: {fileID: 5557055712391559487}
 --- !u!95 &5557055712391559487
 Animator:
   serializedVersion: 5

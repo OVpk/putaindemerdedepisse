@@ -123,9 +123,12 @@ public class SelectCharacter : MonoBehaviour
 
     public bool GameMustBegin() => joueur1Ready && joueur2Ready;
 
+    public Animator animDeTransition;
+
     public IEnumerator BeginGame()
     {
-        yield return new WaitForSeconds(6f);
+        animDeTransition.SetTrigger("StartAnim");
+        yield return new WaitForSeconds(10f);
         
         GameManager.Instance.InitSpecificAlienThings(choixJoueur1, PlayerController.PlayerID.Player1);
         GameManager.Instance.InitSpecificAlienThings(choixJoueur2, PlayerController.PlayerID.Player2);
