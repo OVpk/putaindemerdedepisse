@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -126,7 +127,7 @@ public class GameManager : MonoBehaviour
         }
         
         Debug.Log("Partie terminée !");
-        StopGame();
+        StartCoroutine(StopGame());
     }
     
     public List<Sprite> aliens;
@@ -258,7 +259,7 @@ public class GameManager : MonoBehaviour
     
     public List<AudioClip> winnerSongs;
     
-    private void StopGame()
+    private IEnumerator StopGame()
     {
         winScreen.SetActive(true);
         
@@ -277,6 +278,10 @@ public class GameManager : MonoBehaviour
         winnerImage.sprite = alienWinners[(int)winnerCouleur];
         looserImage.sprite = alienLoosers[(int)looserCouleur];
         backgroundWin.sprite = winnerBackgrounds[(int)winnerCouleur];
-        SoundManager.Instance.PlaySFX(winnerSongs[(int)winnerCouleur]);
+        SoundManager.Instance.PlaySFX(winnerSongs[(int)winnerCouleur], 1.5f);
+
+        yield return new WaitForSeconds(4f);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
