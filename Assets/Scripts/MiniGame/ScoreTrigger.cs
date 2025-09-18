@@ -10,8 +10,18 @@ public class ScoreTrigger : MonoBehaviour
     public GameObject floatingScorePrefab;   // Prefab avec TextMeshProUGUI
     public RectTransform parentCanvas;       // RectTransform du Canvas UI
 
+    public bool isMoucheTrigger;
+
+    public ZigZagMove moucheScript;
+
     private void OnCollisionEnter(Collision collision)
     {
+        if (isMoucheTrigger)
+        {
+            if (!moucheScript.isActive)
+                return;
+        }
+        
         // Vérifie qu’il y a bien un point de contact
         if (collision.contactCount == 0) return;
 
@@ -29,6 +39,11 @@ public class ScoreTrigger : MonoBehaviour
                 AddScore(ref GameManager.Instance.scoreP2, GameManager.Instance.scoreTextP2);
                 SpawnFX(hitPoint, PlayerController.PlayerID.Player2);
                 break;
+        }
+        
+        if (isMoucheTrigger)
+        {
+            moucheScript.isActive = false;
         }
     }
 

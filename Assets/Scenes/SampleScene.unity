@@ -465,6 +465,7 @@ MonoBehaviour:
   entrySpeed: 200
   speed: 200
   directionChangeTime: 1.5
+  isActive: 0
   potiteMouche: {fileID: 108053344}
   animDeMort: {fileID: 7400000, guid: cdd6ccec770c41f48805d2203e04f7fe, type: 2}
   animatorScoreMouche: {fileID: 1334635456}
@@ -522,6 +523,8 @@ MonoBehaviour:
   floatingScorePrefab: {fileID: 5199148333784999755, guid: fe8aeeb665fd89547b920a3dba20c5ff,
     type: 3}
   parentCanvas: {fileID: 127873484}
+  isMoucheTrigger: 1
+  moucheScript: {fileID: 108053346}
   cam: {fileID: 811553969}
 --- !u!65 &108053350
 BoxCollider:
@@ -733,6 +736,8 @@ MonoBehaviour:
   floatingScorePrefab: {fileID: 5199148333784999755, guid: fe8aeeb665fd89547b920a3dba20c5ff,
     type: 3}
   parentCanvas: {fileID: 127873484}
+  isMoucheTrigger: 0
+  moucheScript: {fileID: 0}
   cam: {fileID: 811553969}
 --- !u!1 &127873480
 GameObject:
@@ -976,6 +981,8 @@ MonoBehaviour:
   floatingScorePrefab: {fileID: 5199148333784999755, guid: fe8aeeb665fd89547b920a3dba20c5ff,
     type: 3}
   parentCanvas: {fileID: 127873484}
+  isMoucheTrigger: 0
+  moucheScript: {fileID: 0}
   cam: {fileID: 811553969}
 --- !u!64 &238847408
 MeshCollider:
@@ -1459,6 +1466,11 @@ MonoBehaviour:
   scorePoolP2: {fileID: 650282329}
   activeEvents:
   - {fileID: 2089225377}
+  - {fileID: 1471044995}
+  - {fileID: 844306981}
+  - {fileID: 1890887875}
+  - {fileID: 1654366530}
+  - {fileID: 1718703003}
   selectCharacter: {fileID: 576298739}
   currentGameMode: 0
   roundDuration: 45
@@ -2995,6 +3007,8 @@ MonoBehaviour:
   floatingScorePrefab: {fileID: 5199148333784999755, guid: fe8aeeb665fd89547b920a3dba20c5ff,
     type: 3}
   parentCanvas: {fileID: 127873484}
+  isMoucheTrigger: 0
+  moucheScript: {fileID: 0}
   cam: {fileID: 811553969}
 --- !u!1 &1081255449
 GameObject:
@@ -4378,6 +4392,8 @@ MonoBehaviour:
   floatingScorePrefab: {fileID: 5199148333784999755, guid: fe8aeeb665fd89547b920a3dba20c5ff,
     type: 3}
   parentCanvas: {fileID: 127873484}
+  isMoucheTrigger: 0
+  moucheScript: {fileID: 0}
   cam: {fileID: 811553969}
 --- !u!114 &1654366532
 MonoBehaviour:
@@ -4851,6 +4867,8 @@ MonoBehaviour:
   floatingScorePrefab: {fileID: 5199148333784999755, guid: fe8aeeb665fd89547b920a3dba20c5ff,
     type: 3}
   parentCanvas: {fileID: 127873484}
+  isMoucheTrigger: 0
+  moucheScript: {fileID: 0}
   cam: {fileID: 811553969}
 --- !u!65 &1758304882
 BoxCollider:
@@ -5051,6 +5069,8 @@ MonoBehaviour:
   floatingScorePrefab: {fileID: 5199148333784999755, guid: fe8aeeb665fd89547b920a3dba20c5ff,
     type: 3}
   parentCanvas: {fileID: 127873484}
+  isMoucheTrigger: 0
+  moucheScript: {fileID: 0}
   cam: {fileID: 811553969}
 --- !u!1 &1902961346
 GameObject:
@@ -5359,6 +5379,8 @@ MonoBehaviour:
   floatingScorePrefab: {fileID: 5199148333784999755, guid: fe8aeeb665fd89547b920a3dba20c5ff,
     type: 3}
   parentCanvas: {fileID: 127873484}
+  isMoucheTrigger: 0
+  moucheScript: {fileID: 0}
   cam: {fileID: 811553969}
 --- !u!64 &2031977807
 MeshCollider:
@@ -5433,6 +5455,8 @@ MonoBehaviour:
   floatingScorePrefab: {fileID: 5199148333784999755, guid: fe8aeeb665fd89547b920a3dba20c5ff,
     type: 3}
   parentCanvas: {fileID: 127873484}
+  isMoucheTrigger: 0
+  moucheScript: {fileID: 0}
   cam: {fileID: 811553969}
 --- !u!65 &2062651212
 BoxCollider:
@@ -5644,6 +5668,8 @@ MonoBehaviour:
   floatingScorePrefab: {fileID: 5199148333784999755, guid: fe8aeeb665fd89547b920a3dba20c5ff,
     type: 3}
   parentCanvas: {fileID: 127873484}
+  isMoucheTrigger: 0
+  moucheScript: {fileID: 0}
   cam: {fileID: 811553969}
 --- !u!64 &2071175205
 MeshCollider:
