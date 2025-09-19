@@ -30,6 +30,11 @@ public class SelectCharacter : MonoBehaviour
     public List<Sprite> aliens;
     public List<Sprite> aliensVERSUS;
     public List<Sprite> aliensSILOUHETE;
+    public List<Sprite> aliensNamesSpritesDROITE;
+    public List<Sprite> aliensNamesSpritesGAUCHE;
+    
+    public Image name1Img;
+    public Image name2Img;
     
     public TMP_Text chronoText;
     public int chronoStartValue = 5;
@@ -37,11 +42,6 @@ public class SelectCharacter : MonoBehaviour
     private Coroutine chronoRoutine;
 
     public List<AudioClip> selectedSongs;
-
-    private void Start()
-    {
-        StartChrono();
-    }
 
     public void StartChrono()
     {
@@ -83,6 +83,7 @@ public class SelectCharacter : MonoBehaviour
             player1Img.sprite = aliens[(int)couleur];
             player1VERSUSImg.sprite = aliensVERSUS[(int)couleur];
             silouhetePlayer1.sprite = aliensSILOUHETE[(int)couleur];
+            name1Img.sprite = aliensNamesSpritesGAUCHE[(int)couleur];
         }
         
         if (playerId == PlayerController.PlayerID.Player2)
@@ -96,12 +97,17 @@ public class SelectCharacter : MonoBehaviour
             player2Img.sprite = aliens[(int)couleur];
             player2VERSUSImg.sprite = aliensVERSUS[(int)couleur];
             silouhetePlayer2.sprite = aliensSILOUHETE[(int)couleur];
+            name2Img.sprite = aliensNamesSpritesDROITE[(int)couleur];
         }
     }
     
     public void AssignerCouleur(CouleurEnum couleur, PlayerController.PlayerID playerId)
     {
         if (choixJoueur1 == couleur || choixJoueur2 == couleur) return;
+        
+        if (playerId == PlayerController.PlayerID.Player1 && joueur1Ready) return;
+        if (playerId == PlayerController.PlayerID.Player2 && joueur2Ready) return;
+        
 
         if (playerId == PlayerController.PlayerID.Player1)
         {
