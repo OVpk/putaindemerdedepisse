@@ -1667,6 +1667,25 @@ MonoBehaviour:
   musicSource: {fileID: 695790502}
   ambienceSource: {fileID: 1565775227}
   sfxSource: {fileID: 1402189657}
+  manche1:
+  - {fileID: 8300000, guid: a69964500a25c7646b0557d5f9086dc2, type: 3}
+  - {fileID: 8300000, guid: 579ce305acf74e943869a91f7a43d2c5, type: 3}
+  - {fileID: 8300000, guid: 7decd16e9b7581f4aa3c7fd00416d5a2, type: 3}
+  - {fileID: 8300000, guid: 8704d2d79af357a46af6deae698fd74f, type: 3}
+  - {fileID: 8300000, guid: 177da257c2fbccc44869f881f1a8df15, type: 3}
+  - {fileID: 8300000, guid: 7ba0b1db2c7a9c64cb5891c97ecebcc5, type: 3}
+  manche2:
+  - {fileID: 8300000, guid: 1c36cf504f7a79d4ab0cc1e6d971adf8, type: 3}
+  - {fileID: 8300000, guid: 789361ccc0f05f54298418a2cb8d2927, type: 3}
+  - {fileID: 8300000, guid: a593d746d15d868468b9b31c82ea3470, type: 3}
+  - {fileID: 8300000, guid: d61ceccaa9d95234eaffc0baff2f6c4c, type: 3}
+  - {fileID: 8300000, guid: 82dc4370b149cb142be76067d3f7079e, type: 3}
+  manche3:
+  - {fileID: 8300000, guid: 0c4a8fb315dba3a419481cc578ab36e9, type: 3}
+  - {fileID: 8300000, guid: 39f014cfd9260ee4db9f83969568fc10, type: 3}
+  - {fileID: 8300000, guid: cba5c5c492715d2428031fc87d97e908, type: 3}
+  - {fileID: 8300000, guid: 7704df3dfd617c04c87f7840a95660e6, type: 3}
+  - {fileID: 8300000, guid: 4f1c529f87c7c8047a4b71feabc1dc32, type: 3}
 --- !u!1 &556150093
 GameObject:
   m_ObjectHideFlags: 0
