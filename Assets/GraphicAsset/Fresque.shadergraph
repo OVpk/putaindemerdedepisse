@@ -485,7 +485,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "01a8294caabc4505a333d1f502df3f83",
     "m_Id": 0,
-    "m_DisplayName": "Emissive",
+    "m_DisplayName": "_Emissive",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2750,9 +2750,9 @@
     "m_Guid": {
         "m_GuidSerialized": "1435ecab-6eac-4001-9a11-b351f467295a"
     },
-    "m_Name": "Emissive",
+    "m_Name": "_Emissive",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Emissive",
+    "m_RefNameGeneratedByDisplayName": "_Emissive",
     "m_DefaultReferenceName": "_Emissive",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
