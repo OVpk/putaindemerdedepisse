@@ -9,6 +9,14 @@ using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
+    public AudioClip TITLEMUSIC;
+    
+    private void Start()
+    {
+        SoundManager.Instance.PlayBackgroundMusic(TITLEMUSIC);
+    }
+
+
     [SerializeField] private CinematicController introCinematic;
     [SerializeField] private float gameDuration;
     [SerializeField] public PlayerController player1;
@@ -33,11 +41,12 @@ public class GameManager : MonoBehaviour
     
     public enum GameMode
     {
+        Title,
         SelectCharacter,
         InGame
     }
 
-    public GameMode currentGameMode = GameMode.SelectCharacter;
+    public GameMode currentGameMode = GameMode.Title;
     
     private void Awake()
     {
@@ -101,6 +110,10 @@ public class GameManager : MonoBehaviour
         SoundManager.Instance.PlayBackgroundMusic(globalMusic);
     }
 
+    public GameObject redyPiss;
+
+    public AnimationClip animRedyPiss;
+
     public IEnumerator GameRoutine()
     {
         //yield return introCinematic.PlayCinematic();
@@ -108,6 +121,13 @@ public class GameManager : MonoBehaviour
         
         for (int i = 1; i <= 3; i++)
         {
+            
+            redyPiss.SetActive(true);
+
+            yield return new WaitForSeconds(animRedyPiss.length);
+            
+            redyPiss.SetActive(false);
+            
             Debug.Log($"=== Début Round {i} ===");
             yield return RoundRoutine();
             Debug.Log($"=== Fin Round {i} ===");
@@ -116,7 +136,7 @@ public class GameManager : MonoBehaviour
             transitionEntreRoundScript.LoadDatas(scoreP1, scoreP2, winningRoundP1, winningRoundP2, spriteJ1, spriteJ2, i);
             transitionEntreRoundScript.animator.SetTrigger("Start");
 
-            yield return new WaitForSeconds(8f);
+            yield return new WaitForSeconds(5f);
             
             transitionEntreRoundScript.gameObject.SetActive(false);
             
@@ -258,6 +278,8 @@ public class GameManager : MonoBehaviour
     SelectCharacter.CouleurEnum looserCouleur;
     
     public List<AudioClip> winnerSongs;
+
+    public GameObject fresque;
     
     private IEnumerator StopGame()
     {

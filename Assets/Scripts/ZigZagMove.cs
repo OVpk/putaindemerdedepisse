@@ -12,7 +12,7 @@ public class ZigZagMove : MonoBehaviour
     private Vector2 direction;
     private float timer;
     private bool hasEntered = false;   // True quand arrivé dans le canvas
-    private bool isActive = false;
+    public bool isActive = false;
     private Vector2 entryTargetPos;
 
     private void Start()
@@ -49,6 +49,7 @@ public class ZigZagMove : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        if (!isActive) return;
         if (other.gameObject.CompareTag("P1") || other.gameObject.CompareTag("P2"))
         {
             StartCoroutine(StopMoveForKill());

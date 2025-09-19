@@ -48,12 +48,24 @@ public class PlayerController : MonoBehaviour
     public bool canUseControls = true;
     public PeeController peeController;
 
+    public AudioClip SELECTIONMUSIC;
 
     private void Update()
     {
         if (!canUseControls) return;
+
+        if (GameManager.Instance.currentGameMode == GameManager.GameMode.Title)
+        {
+            if (Input.GetKeyDown(hold))
+            {
+                GameManager.Instance.currentGameMode = GameManager.GameMode.SelectCharacter;
+                Destroy(GameManager.Instance.fresque);
+                GameManager.Instance.selectCharacter.StartChrono();
+                SoundManager.Instance.PlayBackgroundMusic(SELECTIONMUSIC);
+            }
+        }
         
-        if (GameManager.Instance.currentGameMode == GameManager.GameMode.InGame)
+        else if (GameManager.Instance.currentGameMode == GameManager.GameMode.InGame)
         {
             if (Input.GetKey(up))
             {
@@ -83,7 +95,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (GameManager.Instance.currentGameMode == GameManager.GameMode.SelectCharacter)
+        else if (GameManager.Instance.currentGameMode == GameManager.GameMode.SelectCharacter)
         {
             if (Input.GetKey(up) && Input.GetKey(left))
             {
