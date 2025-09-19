@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
         if (GameManager.Instance.currentGameMode == GameManager.GameMode.Title)
         {
-            if (Input.GetKeyDown(hold))
+            if (Input.GetKeyDown(KeyCode.X))
             {
                 GameManager.Instance.currentGameMode = GameManager.GameMode.SelectCharacter;
                 Destroy(GameManager.Instance.fresque);

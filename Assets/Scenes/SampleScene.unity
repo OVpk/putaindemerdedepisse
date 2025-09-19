@@ -2934,6 +2934,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventDuration: 4
   chasseDEau: {fileID: 1994803437}
+  animator: {fileID: 1504859298}
+  gonee: {fileID: 7400000, guid: 841d1051d368f4541930b7e9a5b8b4a2, type: 2}
 --- !u!1 &854285990
 GameObject:
   m_ObjectHideFlags: 0
@@ -4651,6 +4653,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490543054}
   m_CullTransparentMesh: 1
+--- !u!95 &1504859298 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6284783967225033065, guid: 77c2aadca4ff00c489ab4c01fe574a12,
+    type: 3}
+  m_PrefabInstance: {fileID: 1994803432}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1565775226
 GameObject:
   m_ObjectHideFlags: 0
