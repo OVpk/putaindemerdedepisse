@@ -102,6 +102,10 @@ public class GameManager : MonoBehaviour
         SoundManager.Instance.PlayBackgroundMusic(globalMusic);
     }
 
+    public GameObject redyPiss;
+
+    public AnimationClip animRedyPiss;
+
     public IEnumerator GameRoutine()
     {
         //yield return introCinematic.PlayCinematic();
@@ -109,6 +113,13 @@ public class GameManager : MonoBehaviour
         
         for (int i = 1; i <= 3; i++)
         {
+            
+            redyPiss.SetActive(true);
+
+            yield return new WaitForSeconds(animRedyPiss.length);
+            
+            redyPiss.SetActive(false);
+            
             Debug.Log($"=== Début Round {i} ===");
             yield return RoundRoutine();
             Debug.Log($"=== Fin Round {i} ===");

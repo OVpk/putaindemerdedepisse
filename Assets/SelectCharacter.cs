@@ -127,16 +127,18 @@ public class SelectCharacter : MonoBehaviour
         switch (playerId)
         {
             case PlayerController.PlayerID.Player1 :
+                if (joueur1Ready) break;
                 joueur1Ready = true;
                 SoundManager.Instance.PlaySFX(selectedSongs[(int)choixJoueur1]);
+                if (GameMustBegin()) StartCoroutine(BeginGame());
                 break;
             case PlayerController.PlayerID.Player2 :
+                if (joueur2Ready) break;
                 joueur2Ready = true;
                 SoundManager.Instance.PlaySFX(selectedSongs[(int)choixJoueur2]);
+                if (GameMustBegin()) StartCoroutine(BeginGame());
                 break;
         }
-        
-        if (GameMustBegin()) StartCoroutine(BeginGame());
     }
 
     public bool GameMustBegin() => joueur1Ready && joueur2Ready;
