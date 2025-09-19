@@ -14,7 +14,15 @@ public class Couvercle : GameEvent
 
     public override void StopEvent()
     {
-        gameObject.SetActive(false);
+        StartCoroutine(OuvreCouvercle());
+    }
+
+    public AnimationClip couvercleUp;
+
+    public IEnumerator OuvreCouvercle()
+    {
         animator.SetTrigger("up");
+        yield return new WaitForSeconds(couvercleUp.length);
+        gameObject.SetActive(false);
     }
 }

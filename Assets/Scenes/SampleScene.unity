@@ -254,7 +254,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b5f138185c106448bd6b35a30816c18, type: 2}
   m_sharedMaterial: {fileID: -7986302975606184314, guid: 1b5f138185c106448bd6b35a30816c18,
@@ -1006,6 +1006,117 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 21e4134dc49405b4c903dbd836de319b, type: 3}
+--- !u!1001 &392330361
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1890887872}
+    m_Modifications:
+    - target: {fileID: 4330293755831598780, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 97c284cabfc77dc4e8510ee0e81234a1,
+        type: 3}
+    - target: {fileID: 4330293755831598780, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547586540226350641, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.344823
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547586540226350641, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.344823
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547586540226350641, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.344823
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547586540226350641, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547586540226350641, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547586540226350641, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547586540226350641, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547586540226350641, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547586540226350641, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547586540226350641, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547586540226350641, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547586540226350641, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547586540226350641, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135130024109711565, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+        type: 3}
+      propertyPath: m_Name
+      value: repose_cul_down
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135130024109711565, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 10c44a1d1c80db34dbd7cc3af752f338, type: 3}
+--- !u!4 &392330362 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5547586540226350641, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+    type: 3}
+  m_PrefabInstance: {fileID: 392330361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &392330363 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3986257198418493935, guid: 10c44a1d1c80db34dbd7cc3af752f338,
+    type: 3}
+  m_PrefabInstance: {fileID: 392330361}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2877,7 +2988,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b5f138185c106448bd6b35a30816c18, type: 2}
   m_sharedMaterial: {fileID: -7986302975606184314, guid: 1b5f138185c106448bd6b35a30816c18,
@@ -4755,6 +4866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventDuration: 3
   animator: {fileID: 907243119}
+  couvercleUp: {fileID: 7400000, guid: 03aef83774943e747ae24e7444746a24, type: 2}
 --- !u!114 &1654366531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5374,6 +5486,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2071175202}
+  - {fileID: 392330362}
   m_Father: {fileID: 820630657}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -5388,7 +5501,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890887871}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -5432,6 +5545,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventDuration: 3
+  animator: {fileID: 392330363}
+  lunetteUp: {fileID: 7400000, guid: 61580a9ad1d91cf4e9ff2a26c2644fa6, type: 2}
 --- !u!114 &1890887876
 MonoBehaviour:
   m_ObjectHideFlags: 0
