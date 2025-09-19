@@ -9,6 +9,14 @@ using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
+    public AudioClip TITLEMUSIC;
+    
+    private void Start()
+    {
+        SoundManager.Instance.PlayBackgroundMusic(TITLEMUSIC);
+    }
+
+
     [SerializeField] private CinematicController introCinematic;
     [SerializeField] private float gameDuration;
     [SerializeField] public PlayerController player1;

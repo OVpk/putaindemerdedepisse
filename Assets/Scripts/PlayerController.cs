@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
     public bool canUseControls = true;
     public PeeController peeController;
 
+    public AudioClip SELECTIONMUSIC;
 
     private void Update()
     {
@@ -60,6 +61,7 @@ public class PlayerController : MonoBehaviour
                 GameManager.Instance.currentGameMode = GameManager.GameMode.SelectCharacter;
                 Destroy(GameManager.Instance.fresque);
                 GameManager.Instance.selectCharacter.StartChrono();
+                SoundManager.Instance.PlayBackgroundMusic(SELECTIONMUSIC);
             }
         }
         

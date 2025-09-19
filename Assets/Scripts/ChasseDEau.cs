@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class ChasseDEau : GameEvent
 {
-    public GameObject water;
+    public GameObject chasseDEau;
     
     public override void StartEvent()
     {
-        water.transform.localScale *= 2;
+        chasseDEau.SetActive(true);
     }
 
     public override void StopEvent()
     {
-        water.transform.localScale /= 2;
+        chasseDEau.SetActive(false);
     }
 }
